@@ -1,0 +1,214 @@
+/* ===== GLOBAL STYLES ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Courier New", Courier, monospace;
+  background-color: beige;
+  color: black;
+  line-height: 1.6;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+  position: sticky;
+  top: 0;
+  background-color: blue;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  z-index: 1000;
+}
+
+.navbar .logo {
+  font-weight: 700;
+  font-size: 1.5em;
+  color: white;
+}
+
+.navbar nav {
+  display: flex;
+}
+
+.navbar nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.navbar nav a:hover,
+.navbar nav a.active {
+  text-decoration: underline;
+}
+
+/* ===== MAIN CONTENT ===== */
+main {
+  padding: 40px 20px;
+  max-width: 900px;
+  margin: 40px auto;
+  background: white;
+  border-radius: 8px;
+}
+
+/* ===== HERO SECTION ===== */
+.hero {
+  text-align: center;
+  padding: 80px 20px;
+  background: linear-gradient(to right, #eaf0f6, #d3e0ea);
+  border-radius: 8px;
+}
+
+.hero h1 {
+  color: navy;
+  font-size: 2.5em;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  margin-bottom: 20px;
+  font-size: 1.1em;
+}
+
+.btn {
+  display: inline-block;
+  background-color: pink;
+  color: black;
+  text-decoration: none;
+  padding: 12px 25px;
+  border-radius: 4px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: lightgrey;
+}
+
+/* ===== CONTACT FORM ===== */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form label {
+  margin-top: 10px;
+  font-weight: 500;
+  color: navy;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-top: 5px;
+  width: 100%;
+}
+
+.contact-form button {
+  margin-top: 15px;
+  background-color: aqua;
+  color: navy;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contact-form button:hover {
+  background-color: lightblue;
+  color: white;
+}
+
+/* ===== POLICY PAGE ===== */
+.policy-list {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.policy-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background-color: beige;
+  border-radius: 6px;
+}
+
+.policy-item span {
+  font-weight: 500;
+}
+
+.pdf-btn {
+  background-color: blue;
+  color: white;
+  padding: 8px 15px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.pdf-btn:hover {
+  background-color: navy;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background-color: pink;
+  color: navy;
+  text-align: center;
+  padding: 15px 0;
+  margin-top: 40px;
+  font-size: 0.9em;
+}
+
+/* ===== MOBILE RESPONSIVE ===== */
+@media (max-width: 768px) {
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar nav {
+    flex-direction: column;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .navbar nav a {
+    margin: 8px 0;
+  }
+
+  .hero {
+    padding: 60px 15px;
+  }
+
+  .hero h1 {
+    font-size: 1.8em;
+  }
+
+  main {
+    padding: 20px 15px;
+    margin: 20px;
+  }
+
+  .policy-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .pdf-btn {
+    margin-top: 10px;
+  }
+}
